@@ -1,18 +1,5 @@
 import React, { useState } from 'react'
-
-const useForm = initialValues => {
-  const [values, setValues] = useState(initialValues);
-
-  return [
-    values, 
-    e => {
-      setValues({
-        ...values,
-        [e.target.name]: e.target.value,
-      });
-    },
-  ];
-};
+import { useForm } from '../hooks/useForm';
 
 const UseState = () => {
   const [{ count, count2 }, setCount] = useState({ count: 0, count2: 0 });
